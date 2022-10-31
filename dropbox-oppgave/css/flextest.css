@@ -1,0 +1,19 @@
+div{    
+    border: solid 1px black;
+    padding: 10px;
+}
+
+.innholdsboks{
+    display: flex;
+/*    flex-wrap: wrap;
+*/
+    background-color: cadetblue;
+/*    width: 100%;
+*/
+}
+
+.box1, .box2, .box3{
+    background-color: blueviolet;
+    max-width: 300px;
+    min-width:200px;
+}
