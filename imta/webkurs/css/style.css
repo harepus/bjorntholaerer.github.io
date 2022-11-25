@@ -1,0 +1,85 @@
+/* kommentarer */
+div{
+    border: solid black 2px;
+    margin: 10px;
+
+}
+
+
+body{
+    background-color: #fffffff0;
+}
+
+h1 {
+    color: red;
+}
+
+.main{
+    margin:auto;
+    background-color: white;
+    max-width: 800px;
+
+
+}
+
+.top{
+    background-color: burlywood;
+    padding: 10px;  /* legger plass på innsiden */
+}
+
+.footer{
+    background-color: black;
+    color: white;
+
+}
+
+.footer, .innhold{
+    padding: 20px;
+}
+
+.innholdsbilde{
+    width:100%;
+    height:100%;
+
+}
+
+.nav li{
+    display: inline;
+    background-color: lightgray;
+    padding: 0.5em;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: red;
+}
+
+
+/* unvisited link */
+.nav a:link {
+    color: green;
+  }
+  
+/* visited link */
+.nav a:visited {
+    color: green;
+  }
+  
+/* mouse over link */
+.nav a:hover {
+    color: hotpink;
+  }
+  
+/* selected link */
+.nav a:active {
+    color: blue;
+  }
+
+
+
+
+
+
+
+
+
+
+
