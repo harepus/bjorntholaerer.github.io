@@ -1,0 +1,107 @@
+/*mobil først eksempel*/
+head, body {
+	margin: 0;
+}
+
+#hovedboks{
+	height: 100vh;
+	width=100vw;	
+}
+
+#topp{
+	display: flex;
+}
+
+#topp_left{
+	display: flex;
+	width:100%;
+	justify-content: left;
+}
+
+#topp_right{
+	display: flex;
+	width:100%;
+	justify-content: right;
+}
+  
+#logo{
+	font-size: 3rem;
+	margin-top: 0.3rem;
+	margin-right: 0;
+	margin-bottom: 0.3rem;
+	margin-left: 1rem;
+}
+
+/*for mobil*/
+@media screen and (max-width: 768px) {
+	#nav{
+		display: none;
+	}
+}
+
+/*for desktop*/
+@media screen and (min-width: 768px) {
+	#nav{
+		display: visible;
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		gap: 0.5rem;
+	}
+}
+
+.nav_elementer{
+	display:flex;	
+	flex-direction: row;
+    align-items: center;
+	justify-content: center;
+}
+
+#burger{
+	font-size: 4rem;
+	font-weight: bold;
+	margin: 1rem;
+}
+
+#innhold{
+	display:flex;	
+	flex-direction: column;
+    align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+
+/*for mobil*/
+@media screen and (max-width: 768px) {
+	.innholdsrad{
+		display:flex;
+		/*vis elementene i kolonne*/
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+}
+
+/*for desktop*/
+@media screen and (min-width: 768px) {
+	.innholdsrad{
+		display:flex;	
+		/*vis elementene i rad*/
+		flex-direction: row;
+		gap: 0.5rem;
+	}
+}
+
+.innholdselement{	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20rem;
+	height: 10rem;
+	background-color: white;
+}
+
+#footer{
+	display: flex;
+	justify-content: center;
+}

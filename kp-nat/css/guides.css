@@ -1,0 +1,21 @@
+/*mobil først eksempel*/
+
+/*rammer for å vise divbokser*/
+div {
+	border: solid black 1px;
+	margin: 5px;
+}
+
+/* farger for å femheve de forskjellige boksene*/
+#topp{background-color: gold;}
+#topp_left{background-color: wheat;}
+#topp_right{background-color: beige;}
+#logo{}
+#nav{background-color: lavender;}
+.nav_elementer{background-color: pink;}
+#burger{background-color: palegreen;}
+#innhold{background-color: skyblue;}
+.innholdsrad{background-color: lightgreen;}
+.innholdselement{background-color: plum;}
+#footer{background-color: lightsalmon;}
+/* slutt farger*/
