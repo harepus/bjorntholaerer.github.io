@@ -1,0 +1,70 @@
+Legg dette i HTML-filen (index.html):
+
+<!-- Lenke til ekstern file med JavaScript 
+     Kan legges i head eller body -->
+<script src="script/mittscript.js"></script>
+
+<!-- Skjema for å sende variabler til JavaScript -->
+<form action="javascript:variablerFraForm()">
+	<label for="variabel_a">Variabel a<br>
+	<input type="text" id="variabel_a" name="variabel_a"><br>
+	<label for="variabel_b">Variabel b<br>
+	<input type="text" id="variabel_b" name="variabel_a"><br>
+	<input type="submit" value="Send">	
+</form>
+
+<!-- Paragraph hvor vi kan vise Output fra JavaScript -->
+<p id="output"></p>
+
+
+************************************************
+Legg dette javascript-filen (mittScript.js):
+
+/* Kommentarer i 
+   JavaScript kan 
+   gå over flere linjer	   
+*/
+	
+// eller bare en enkelt linje 
+
+
+// Nå skal vi definere en funksjon som henter variabler fra HTML-form
+
+function variablerFraForm(){
+	
+	// det er god praksis å deklarere lokale variabler (variabler som benyttes inne i en funksjon) i starten av funksjonen
+	
+	let input_a ="";
+	let input_b ="";
+	let myOutput = "";
+	let reurVerdi = "";
+
+	// tilordne lokale variabler med verdier fra skjema/form
+	// vi bruker document.getElementById(id/variabelnavn_i_form)
+
+	input_a = document.getElementById("variabel_a");
+	input_b = document.getElementById("variabel_b");
+
+	
+	// console.log brukes for utvikling/debugging
+	// output til console.log i browser inspector (ctrl/cmd+i)
+
+	// vis variablene i konsoll-loggen
+	console.log("Input a: " + input_a);
+	console.log("Input b: " + input_b);
+	
+	// lage det som skal vises i html i variabelen myOutput
+	//
+	// eksempel 1: legge sammen tall fra de to skjemafeltene
+	//myOutput = input_1 + input_2;
+
+	// eksempel 2: sette sammen tegnene fra de to skjemafeltene
+	//myOutput = input_1 + input_2;
+
+	
+	// output til en spesifikk paragraph <p id="output"> i html-filen	
+	document.getElementById("output").innerHTML = minOutput;	
+	
+	// en funksjon kan returnere en verdi
+	return(returVerdi)
+}
