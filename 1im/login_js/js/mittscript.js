@@ -12,30 +12,50 @@ function variablerFraForm(){
 	
 	// det er god praksis å deklarere lokale variabler (variabler som benyttes inne i en funksjon) i starten av funksjonen
 	
-	let variabel_brukernavn ="";
-	let variabel_passord ="";
+	let brukernavnFraSkjema ="";
+	let passordFraSkjema ="";
+	let korrekt_brukernavn ="Bjorn";
+	let korrekt_passord ="abc123";
 	let myOutput = "";
-	let returVerdi = "";
+	let myDebug = 1;
 
 	// tilordne lokale variabler med verdier fra skjema/form
 	// vi bruker document.getElementById(id/variabelnavn_i_form)
-
-	variabel_brukernavn = document.getElementById("brukernavn").value;
-	variabel_passord = document.getElementById("passord").value;
-
+	brukernavnFraSkjema = document.getElementById("brukernavn").value;
+	passordFraSkjema = document.getElementById("passord").value;
 	
 	// console.log brukes for utvikling/debugging
 	// output til console.log i browser inspector (ctrl/cmd+i)
 	// vis variablene i konsoll-loggen
-	console.log("Brukernavn : " + variabel_brukernavn);
-	console.log("Passord : " + variabel_passord);
-	
-	// legge til det som skal vises i html-filen i variabelen myOutput
-	//
 
-	myOutput = "Hei " + variabel_brukernavn + " !";
-	
+    if(myDebug == 1){
+        console.log("Brukernavn : " + brukernavnFraSkjema);
+	    console.log("Passord : " + passordFraSkjema);
+    }
+    
+    // sjekk om input er tom
+    if ( (brukernavnFraSkjema == "") || (passordFraSkjema == "") ) {
+
+       myOutput =  myOutput + "Du må skrive inn brukernavn og passord !<br> Prøv på nytt";
+        
+    } else{
+        // sjekk brukernavn og passord
+        if(   (brukernavnFraSkjema == korrekt_brukernavn) && (passordFraSkjema == korrekt_passord)    )  {
+
+            myOutput =  myOutput + "Velkommen " + brukernavnFraSkjema + "!";
+
+        }
+        else{
+            myOutput =  myOutput + "Feil brukernavn eller passord!<br> Prøv på nytt";
+
+        }
+    }
+
 	// vise output i en spesifikk paragraph <p id="output"> i html-filen	
 	document.getElementById("output").innerHTML = myOutput;	
 	
 }
+
+
+
+
