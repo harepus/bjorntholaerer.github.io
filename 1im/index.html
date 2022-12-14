@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="nb">
-
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IM KP 22-23</title>
+    <title>Login med javascript</title>
 </head>
-
 <body>
-    <h1>IM Konsetputvikling og programmering 22-23</h1>
-    <p>Her finner du filene vi jobber med i konseptutvikling og programmering på IM.</p>
-    <ul>
-        <li><a href="login_js">Login_js</a></li>
-    </ul>
-    <p>Hvis du vil se på kildekoden kan du i nettleseren velge "vis sidekilde"/"view source" eller trykke CTRL-U. Da vises html-koden i en ny fane.</p>
-    <p>For å se css-filer, bilder og eventuelle script-filer kan du klikke på lenken til filen i html-koden.<br>
-       F. eks. hvis du vil se på css-filen så klikker du på det som står som href-verdi i link-taggen (<code>&lt;link rel="stylesheet" href="<span style="color:red; font-weight: bold">css/style.css</span>"&gt;</code>) i html-kildekoden. Da vises css-filen i en ny fane.
-    </p>
-    <p>Som referanse og oppslagsverk bruker vi <a href="https://w3schools.com/html/">W3Schools - HTML</a><br>
-            Læringsressurser på NDLA <a href="https://ndla.no/nb/subject:1:1352b19e-e706-4480-a728-c6b0a57ba8ae/topic:1:f7b88f8c-5f2f-4ea8-bdcf-1bd4811c37b3/topic:1:df9278b0-7252-4a62-a39c-3107d7f319f1/">Introduksjon til HTML og CSS - Konseptutvikling og programmering (IM-IKM vg1) - NDLA</a>
-    </p>
-    
+    <h1>Login med javascript</h1>
+    <!-- skjema for å hente inn brukernavn og passord som kaller funksjon javascript-filen ved submit-->
+    <form action="javascript:variablerFraForm()">
+        
+        <label for="brukernavn">Brukernavn:</label>
+        <input type="text" id="brukernavn">
+        <label for="Passord">Passord</label>
+        <input type="password" id="passord">
+        <input type="submit" value="Login">
+    </form>
+
+    <!-- avsnitt for innhold/output fra scriptet -->
+    <p id="output"></p>
+
+    <!-- vi laster scriptet i slutten av siden for at det ikke skal forsinke opptegningen/innlastingen av siden-->
+    <script src="js/mittscript.js"> </script>
 </body>
 </html>
