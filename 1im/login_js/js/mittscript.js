@@ -37,5 +37,5 @@ function variablerFraForm(){
 	
 	// vise output i en spesifikk paragraph <p id="output"> i html-filen	
 	document.getElementById("output").innerHTML = myOutput;	
-
+	
 }
